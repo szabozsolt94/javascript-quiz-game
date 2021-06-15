@@ -1,0 +1,147 @@
+:root{
+    --bg-main: #553984;
+    --bg-secondary: #6f57be;
+    --text-color: #FAFAFA;
+    --btn-main: #E7577A;
+    --btn-border: #D03E61;
+    --hover-main: #f5bf36;
+    --hover-border: #cf970a;
+    --disabled-main: #616161;
+    --disabled-border: #424242;
+    --main-font:'Rubik', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+.btn{
+    background-color: var(--btn-main);
+    color: var(--text-color);
+    border: none;
+    border-bottom: .5rem solid var(--btn-border);
+    border-radius: 1rem;
+    padding: 0.7em 1em;
+    margin: .5rem 0;
+    letter-spacing: .05rem;
+    cursor: pointer;
+}
+
+.btn:disabled{
+    background-color: var(--disabled-main);
+    border-bottom: .5rem solid var(--disabled-border);
+}
+
+.option-btn:hover{
+    background-color: var(--hover-main);
+    border-bottom: .5rem solid var(--hover-border);
+}
+
+.nav-btn{
+    font-size: 1.4rem;
+}
+
+.option-btn{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.default-hidden{
+    display: none;
+}
+
+.main-container{
+    max-width: 80rem;
+    margin: 5rem auto;
+    display: grid;
+    background-color: var(--bg-secondary);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    border: 2px solid var(--text-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 14px 1px #00000038;
+}
+
+.quiz-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.starter-state{
+    justify-content: center;
+}
+
+.starter-state button{
+    font-size: 2rem;
+}
+.question-title{
+    margin: 3rem 0;
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+.quiz-body{
+    text-align: center;
+    padding: 2rem;
+}
+
+.option-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.result-container{
+    padding: 2rem;
+}
+
+.prize{
+    font-size: 1.5rem;
+    letter-spacing: .05rem;
+}
+
+@media screen and (max-width: 900px){
+    .main-container{
+        margin: 5rem 5%;
+    }
+    .option-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .option-btn{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main-container{
+        margin: 2rem 5%;
+    }
+    .question-title{
+        font-size: 2.2rem;
+    }
+    .nav-btn{
+        font-size: 1.1rem;
+    }
+    .option-btn{
+        font-size: 1.3rem;
+    }
+    .prize{
+        font-size: 1.2rem;
+    }
+}
